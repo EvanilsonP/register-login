@@ -14,5 +14,6 @@ db.connect((err) => {
     console.log('Database connected.');
 });
 app.use('/', require('./routes/pages'));
+app.use('/api', require('./controllers/auth'));
 
 app.listen(PORT, () => console.log(`Up and running on PORT ${PORT}`));
